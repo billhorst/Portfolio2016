@@ -1,0 +1,64 @@
+<div id="projectsSection">
+	<h1 class="sectionTitle">Recent Projects</h1>
+	<div class="projects-content">
+
+
+		<div class="projectBox">
+			<div class="projectTitle">
+				<h2 ng-show="languageChoice.isEnglish" class="sans-serifFont">Plot Generator</h2>
+				<h2 ng-show="languageChoice.isJapanese" class="sans-serifFont">プロットメーカー</h2>
+			</div>
+			<a target="_blank" ng-href="{{url.plotGenApp}}" ng-click="openPlotGeneratorApp()"><div class="projectApp"><img src="images/plotGenPic.PNG" alt="Plot Generator Picture" /></div></a>
+			<div class="projectDescription">
+				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS application that takes words you input and generates a random plot in various genres.</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">単語を入れてランダムな話が読めるAngularJSで作られたアプリ</p>
+			</div>
+			<a target="_blank" ng-href="{{url.plotGenCode}}" ng-click="openPlotGeneratorCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
+		</div>
+
+
+		<div class="projectBox">
+			<div class="projectTitle">
+				<h2 ng-show="languageChoice.isEnglish" class="sans-serifFont">Flickr Searcher</h2>
+				<h2 ng-show="languageChoice.isJapanese" class="sans-serifFont">フリッカー検索機</h2>
+			</div>
+			<a target="_blank" ng-href="{{url.flickrSearcherApp}}" ng-click="openFlickrSearcherApp()"><div class="projectApp"><img src="images/flickrPic.PNG" alt="Flickr Searcher Picture"/></div></a>
+			<div class="projectDescription">
+				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS app that uses the Flickr API and returns pictures based on the search criteria you specify.</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">フリッカーのAPIに頼んで写真を返すAngularJSで作られたアプリ</p>
+			</div>
+			<a target="_blank" ng-href="{{url.flickrSearcherCode}}" ng-click="openFlickrSearcherCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
+		</div>
+
+
+		<div class="projectBox">
+			<div class="projectTitle">
+				<h2 ng-show="languageChoice.isEnglish" class="sans-serifFont">Calculator</h2>
+				<h2 ng-show="languageChoice.isJapanese" class="sans-serifFont">電卓</h2>
+			</div>
+			<a target="_blank" ng-href="{{url.calculatorApp}}" ng-click="openCalculatorApp()"><div class="projectApp"><img src="images/calculatorPic.PNG" alt="Calculator Picture" /></div></a>
+			<div class="projectDescription">
+				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">A basic calculator made with AngularJS and JavaScript. Saves and shows your past calculations.</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">AngularJSとJavaScriptで作られた基本的な電卓</p>
+			</div>
+			<a target="_blank" ng-href="{{url.calculatorCode}}" ng-click="openCalculatorCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
+		</div>
+
+
+		<div class="projectBox">
+			<div class="projectTitle">
+				<h2 ng-show="languageChoice.isEnglish" class="sans-serifFont">Coming soon</h2>
+				<h2 ng-show="languageChoice.isJapanese" class="sans-serifFont">Coming soon</h2>
+			</div>
+			<a target="_blank" ng-href="{{url.geographyQuizApp}}" ng-click="openGeographyQuizApp()"><div class="projectApp"><img src="images/geographyQuizPic.PNG" alt="Geography Quiz Picture" /></div></a>
+			<div class="projectDescription">
+				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS application that calls to the Geonames API. You can take a 10 question quiz on one of three types.</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">GeonamesのAPIに頼んで３種類のクイズをできるAngularJSのアプリ</p>
+			</div>
+			<a target="_blank" ng-href="{{url.geographyQuizCode}}" ng-click="openGeographyQuizCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
+		</div>
+
+
+	</div>
+	<div id="clearBottomOfProjects"></div>
+</div>

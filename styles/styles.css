@@ -1,0 +1,353 @@
+body {
+	background: #F7F7F7 url("../images/rockies.jpg") no-repeat fixed;
+	background-size: cover;
+	background-size: 100%;
+	font-family: "Times New Roman";
+}
+
+#body {
+	margin-top: 52px;
+}
+
+/*----------------------------
+NAVIGATION BAR
+----------------------------*/
+.topNavigation {
+	height: 52px;
+	width: 100%;
+	background:rgba(255,255,255,0.8);
+	position: fixed;
+	margin-top: -52px;
+}
+
+.navList li {
+	display: inline-block;
+	padding-right: 15px;
+	padding-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+	font-size: 18pt;
+	margin-top: -10px;
+}
+
+.topNavigation a {
+	padding-right: 15px;
+	padding-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.topNavigation li:hover {
+	text-shadow: 3px 0px 4px #75D1F0;
+}
+
+.navList li:nth-last-child(n+2) {
+	border-right: solid black 1px;
+}
+
+.nameLogo {
+	border-right: none !important;
+	margin-right: 45px;
+	font-size: 28pt !important;
+	margin-top: -15px !important;
+}
+
+.langButtonDiv {
+	min-width: 100px;
+	height: 30px;
+	margin-top: -60px;
+	float: right;
+}
+
+.langButton {
+	height: 20px;
+	font-size: 18px;
+	margin-top: 10px;
+	padding-bottom: 22px;
+}
+
+.jButton {
+	margin-top: 1px;
+}
+
+/*-----------------------------
+NAME AND INTRO SECTION
+-----------------------------*/
+
+#nameAndIntroSection {
+	padding-top: 52px;
+	padding-bottom: 52px;
+	text-align: center;
+	/*background-color: #F7F7F7;*/
+	color: black;
+	text-shadow: 2px 2px 2px white;
+}
+
+#headerName {
+	font-size: 80pt;
+	font-family: lobster;
+	letter-spacing: 20px;
+	margin: auto;
+	text-shadow: 2px 2px 2px white;
+}
+
+#introDiv {
+	width: 70%;
+	margin: auto;
+}
+
+.home-intro-paragraph {
+	margin-top: 100px;
+	font-size: 20pt;
+	text-align: center;
+}
+
+
+/*---------------------------
+TECHNOLOGY LIST
+---------------------------*/
+
+#techListSection {
+	padding-top: 20px;
+	padding-bottom: 52px;
+	background-color: #F7F7F7;
+}
+
+#techListSection > h1 {
+	text-align: center;
+}
+
+#techListSection > h3 {
+	text-align: center;
+}
+
+#techSectionMain {
+	width: 90%;
+	margin: auto;
+	border: 1px solid black;
+	padding: 30px 0px 30px 30px;
+}
+
+.techChartWord {
+	display: inline-block;
+	width: 15%;
+	font-size: 18pt;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.techChart {
+	height: 15px;
+	display: inline-block;
+}
+
+.h5 {
+	background-color: orange;
+	width: 47%;
+}
+
+.c3 {
+	background-color: lightblue;
+	width: 55%;
+}
+
+.jv {
+	background-color: green;
+	width: 41%;
+}
+
+.jvscpt {
+	background-color: yellow;
+	width: 51%;
+}
+
+.ang {
+	background-color: red;
+	width: 37%;
+}
+
+.jq {
+	background-color: navy;
+	width: 35%;
+}
+
+
+
+/*--------------------------
+PROJECTS SECTION
+--------------------------*/
+
+#projectsSection {
+	padding-top: 52px;
+	background-color: #F7F7F7;
+	text-align: center;
+}
+
+.projects-content {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.projectBox {
+	width: 40%;
+	margin: 40px 10px 0px 50px;
+	display: inline-block;
+	float: left;
+	/*background-color: white;*/
+	border: solid grey 1px;
+}
+
+.projectBox:hover {
+	border: 1px solid #07c;
+	box-shadow: 0 0 100px blue;
+}
+
+.projectTitle {
+	height: 45px;
+	font-size: 18pt;
+	margin-top: -25px;
+	text-shadow: 2px 2px 2px pink;
+	text-align: center;
+}
+
+.projectDescription {
+	min-height: 35px;
+	font-size: 14pt;
+	text-align: center;
+	/*padding-top: 10px;*/
+}
+
+.projectApp {
+	height: 250px;
+	cursor: pointer;
+}
+
+.projectApp img {
+	height: 100%;
+	width: 100%;
+}
+
+/*------------------------*/
+.projectApp {
+	border-style:solid;
+	border-color:#bbb #888 #666 #aaa;
+	border-width:3px 4px 4px 3px;
+	color:#333;
+	line-height:2;
+}
+.projectApp:hover {
+	border-width:2px 5px 5px 3px;
+	border-color:grey;
+}
+.projectApp:active{
+	border-color: #666 #aaa #bbb #888;
+	border-width:5px 2px 2px 5px;
+	color:#000;
+}
+/*--------------------------*/
+
+.projectCode {
+	height: 40px;
+	font-size: 14pt;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*----------------------------*/
+.projectCode {
+	border-style:solid;
+	border-color:#bbb #888 #666 #aaa;
+	border-width:3px 4px 4px 3px;
+	color:#333;
+	line-height:2;
+}
+.projectCode:hover {
+	border-width:2px 5px 5px 3px;
+	border-color:grey;
+}
+.projectCode:active{
+	border-color: #666 #aaa #bbb #888;
+	border-width:5px 2px 2px 5px;
+	color:#000;
+}
+/*---------------------------*/
+
+.projects-line2 {
+	clear: both;
+}
+
+#clearBottomOfProjects {
+	clear: both;
+	padding-top: 100px;
+}
+
+
+/*--------------------------
+CONTACT INFO SECTION
+--------------------------*/
+
+#contactInfoSection {
+	padding-top: 52px;
+	background-color: #F7F7F7;
+}
+
+
+/*------------------------
+RESUME DROPDOWN
+------------------------*/
+
+.resumeDropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 0;
+	background-color: #f9f9f9;
+	min-width: 130px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	min-width: 130px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.resumeDropdown:hover .dropdown-content {
+	display: block;
+}
+
+.resumeDropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+
+/*-----------------------------
+MISC
+-----------------------------*/
+
+#break {
+	height: 100px;
+}
+
+.sans-serifFont {
+	font-family: Helvetica;
+}
+
+/*format size for section headers*/
+.sectionTitle {
+	font-size: 36pt;
+}
