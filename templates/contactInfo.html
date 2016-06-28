@@ -1,3 +1,46 @@
 <div id="contactInfoSection">
-	<h1 class="sectionTitle">My contact info</h1>
+	<hr />
+	<h1 class="sectionTitle" ng-show="languageChoice.isEnglish">Where to Find Me</h1>
+	<h1 class="sectionTitle" ng-show="languageChoice.isJapanese">連絡先</h1>
+	<hr />
+
+	<div class="contact-main" ng-show="languageChoice.isEnglish">
+		<div class="contact-content">
+			<div class="contact-info">
+				<div class="contact-info-left">
+					<img class="emailIcon" src="images/email.png" alt="Email Icon" />
+					<img class="linkedInLogo" src="images/linkedIn.png" alt="LinkedIn Icon" />
+				</div>
+				<div class="contact-info-right">
+					<div class="contact-info-right-information">
+						<a href="mailto:bill@billhorst.com" class="sans-serifFont">bill@billhorst.com</a>
+					</div>
+					<div class="contact-info-right-information">
+						<a href="https://www.linkedin.com/in/horstbill" class="sans-serifFont">https://www.linkedin.com/in/horstbill</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="contact-main" ng-show="languageChoice.isJapanese">
+		<div class="contact-content">
+			<div class="contact-info">
+				<div class="contact-info-left">
+					<img class="emailIcon" src="images/email.png" alt="Email Icon" />
+					<img class="linkedInLogo" src="images/linkedIn.png" alt="LinkedIn Icon" />
+				</div>
+				<div class="contact-info-right">
+					<div class="contact-info-right-information">
+						<a href="mailto:bill@billhorst.com" class="sans-serifFont">bill@billhorst.com</a>
+					</div>
+					<div class="contact-info-right-information">
+						<a href="https://www.linkedin.com/in/horstbill" class="sans-serifFont">https://www.linkedin.com/in/horstbill</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </div>

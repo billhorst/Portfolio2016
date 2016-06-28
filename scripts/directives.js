@@ -4,6 +4,7 @@ angular.module('Directives', [])
 .directive('techList', techList)
 .directive('projectList', projectList)
 .directive('contactInfo', contactInfo)
+.directive('footerSection', footerSection)
 
 function nameIntro() {
 	return {
@@ -29,6 +30,13 @@ function projectList() {
 function contactInfo() {
 	return {
 		templateUrl: 'templates/contactInfo.html',
+		type: 'E'
+	}
+}
+
+function footerSection() {
+	return {
+		templateUrl: 'templates/footerSection.html',
 		type: 'E'
 	}
 }

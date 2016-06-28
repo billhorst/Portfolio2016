@@ -6,6 +6,17 @@ function pageController($scope) {
 	$scope.message = {};
 	$scope.message.timeGreeting = returnTimeGreeting();
 
+    $scope.background = {
+        'morningPic': false,
+        'daytimePic': false,
+        'afternoonPic': false,
+        'nightPic': false
+        
+        
+    }
+    var currentPicture = timePicture();
+    $scope.background[currentPicture] = true;
+
 
 
 	//handle language (last used language, current language display)

@@ -1,16 +1,20 @@
 <div id="techListSection">
-	<h1 class="sectionTitle">Tech List</h1>
+	<hr />
+	<h1 class="sectionTitle" ng-show="languageChoice.isEnglish">Tech List</h1>
+	<h1 class="sectionTitle" ng-show="languageChoice.isJapanese">使っているテクノロジー</h1>
+	<hr />
 
-	<h3>Most frequently technologies used and self-assessed proficiency in each.</h3>
+	<h3 class="sans-serifFont" ng-show="languageChoice.isEnglish">Most frequently technologies used and self-assessed proficiency in each.</h3>
+	<h3 class="sans-serifFont" ng-show="languageChoice.isJapanese">使っているテックと自分が考え出した習熟度</h3>
 
 	<div id="techSectionMain">
 		
-		<div class="techChartWord">HTML5:</div><div class="techChart h5"></div><br />
-		<div class="techChartWord">CSS3:</div><div class="techChart c3"></div><br />
-		<div class="techChartWord">Java:</div><div class="techChart jv"></div><br />
-		<div class="techChartWord">JavaScript:</div><div class="techChart jvscpt"></div><br />
-		<div class="techChartWord">Angular:</div><div class="techChart ang"></div><br />
-		<div class="techChartWord">jQuery:</div><div class="techChart jq"></div>
+		<div class="techChartWord sans-serifFont">HTML5:</div><div class="techChart h5"></div><br />
+		<div class="techChartWord sans-serifFont">CSS3:</div><div class="techChart c3"></div><br />
+		<div class="techChartWord sans-serifFont">Java:</div><div class="techChart jv"></div><br />
+		<div class="techChartWord sans-serifFont">JavaScript:</div><div class="techChart jvscpt"></div><br />
+		<div class="techChartWord sans-serifFont">Angular:</div><div class="techChart ang"></div><br />
+		<div class="techChartWord sans-serifFont">jQuery:</div><div class="techChart jq"></div>
 
 		
 		
