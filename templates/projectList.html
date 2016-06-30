@@ -61,7 +61,17 @@
 			<a target="_blank" ng-href="{{url.geographyQuizCode}}" ng-click="openGeographyQuizCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
 		</div>
 
-
 	</div>
+
 	<div id="clearBottomOfProjects"></div>
+	<div ng-show="languageChoice.isEnglish">
+		<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()"><button class="pResume">View Resume</button></a>
+		<br />
+		<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume"><button class="pResume">Download Resume</button></a>
+	</div>
+	<div ng-show="languageChoice.isJapanese">
+		<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()"><button class="pResume">履歴書の閲覧</button></a>
+		<br />
+		<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume"><button class="pResume">履歴書のダウンロード</button></a>
+	</div>
 </div>

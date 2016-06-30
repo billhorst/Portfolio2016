@@ -331,6 +331,15 @@ PROJECTS SECTION
 	padding-top: 100px;
 }
 
+.pResume {
+	font-size: 16pt;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
 
 /*--------------------------
 CONTACT INFO SECTION
@@ -363,7 +372,7 @@ CONTACT INFO SECTION
 .contact-info-right div {
 	padding-bottom: 50px;
 	width: 100%;
-	font-size: 20pt;
+	font-size: 16pt;
 }
 
 .contact-info-right-information a {
@@ -373,49 +382,9 @@ CONTACT INFO SECTION
 }
 
 .contact-info img {
-	height: 75px;
-	width: 75px;
+	height: 65px;
+	width: 65px;
 }
-
-/*.contact-content {
-	height: 180px;
-	width: 700px;
-	margin: auto;
-	margin-top: 50px;
-	padding: 30px;
-}
-
-.contact-name {
-	height: 20%;
-	width: 100%;
-	font-size: 24pt;
-	white-space: nowrap;
-}
-
-.contact-info {
-	height: 80%;
-	width: 100%;
-}
-
-.contact-info-left, .contact-info-right {
-	display: inline-block;
-}
-
-.contact-info-left {
-	height: 100%;
-	width: 19%;
-	float: left;
-}
-
-
-
-.contact-info-right {
-	height: 100%;
-	width: 80%;
-	float: right;
-}
-
-*/
 
 
 /*----------------------------
