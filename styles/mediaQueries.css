@@ -1,88 +1,330 @@
-/*to fix project section for small screens*/
+/*nav bar for small screens*/
 @media only screen and (max-width: 1000px) {
 
-	.projects-content {
-		max-width: 1200px;
-		margin: auto;
+	.topNavigation {
+		height: 44px;
 	}
 
-	.projectBox {
-		width: 50%;
-		margin-left: 25%;
-		display: inline-block;
-		float: left;
-	}
-
-}
-
-/*to fix project section for very small screens*/
-@media only screen and (max-width: 600px) {
-
-	.projects-content {
-		max-width: 1200px;
-		margin: auto;
-	}
-
-	.projectBox {
-		width: 90%;
-		margin-left: 5%;
-	}
-
-	.projectTitle {
-		font-size: 14pt;
-		margin-top: -15px;
-	}
-
-}
-
-/*to fix background for small screens*/
-@media only screen and (max-width: 600px) {
-
-	body {
-		background: #4596FF;
-	}
-
-	#break {
-		height: 40px;
-	}
-
-}
-
-/*to make tech chart clean to read on smaller screens*/
-@media only screen and (max-width: 820px) {
-
-	.techChartWord {
+	.navList li {
+		padding-left: 0px;
 		font-size: 12pt;
-		font-weight: bold;
+		margin-top: -10px;
+	}
+
+	.topNavigation a {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.navList li:nth-last-child(n+2) {
+		border-right: none;
+	}
+
+	.nameLogo {
+		margin-right: 35px;
+		font-size: 22pt !important;
+		margin-top: -15px !important;
 	}
 
 }
 
-@media only screen and (max-width: 600px) {
+/*nav bar for very small screens*/
+@media only screen and (max-width: 650px) {
 
-	#techSectionMain {
-		padding: 30px 0px 30px 30px;
+	.topNavigation {
+		min-height: 130px;
+		background-color: white; /*change later*/
+		position: absolute;
 	}
 
-	.techChartWord {
-		font-size: 8pt;
+	.navList li {
+		margin-top: 0px;
+		display: block;
+		width: 100%;
+		text-align: center;
 	}
 
-	.techChart {
-		height: 10px;
+	.topNavigation a {
+		padding-right: 0px;
+		padding-left: 0px;
 	}
+
+	.navList li:nth-last-child(n+2) {
+		border-right: none;
+	}
+
+	.nameLogo {
+		margin-right: 35px;
+		font-size: 18pt !important;
+		margin-top: -20px !important;
+	}
+
+	.langButtonDiv {
+		height: 30px;
+		margin-top: -23px;
+		margin-left: 17px;
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	/*fix issues with Japanese letters*/
+
+	.jNav {
+		font-size: 10pt;
+		margin-top: 0px;
+	}
+
+	.jNavLogo {
+		font-size: 14pt;
+	}
+
+	.jButton {
+		margin-top: 8px;
+	}
+
+	.dropdown-content {
+		position: relative;
+		margin-right: 30px;
+		min-width: 130px;
+	}
+
 
 }
 
-@media only screen and (max-width: 420px) {
+/*Japanese nav bar for very small screens*/
+@media only screen and (max-width: 790px) {
 
-	.techChartWord {
-		display: block;
-		text-align: left;
+	.jNav {
+		font-size: 10pt;
+		margin-top: 0px;
 	}
 
-	.techChart {
-		display: block;
+	.jNavLogo {
+		font-size: 12pt;
 	}
 
+	.jButton {
+		margin-top: 8px;
+	}
+
+	/*masthead for small screens*/
+
+	@media only screen and (max-width: 1000px) {
+
+		#nameAndIntroSection {
+			padding-top: 72px;
+		}
+
+		#headerName {
+			font-size: 60pt;
+			letter-spacing: 15px;
+		}
+
+		.home-intro-paragraph {
+			margin-top: 50px;
+			font-size: 16pt;
+		}
+
+		#jHeader {
+			font-size: 30pt;
+		}
+
+	}
+
+	/*to fix project section for small screens*/
+	@media only screen and (max-width: 1000px) {
+
+		.projects-content {
+			max-width: 1200px;
+			margin: auto;
+		}
+
+		.projectBox {
+			width: 50%;
+			margin-left: 25%;
+			display: inline-block;
+			float: left;
+		}
+
+	}
+
+	/*to fix project section for very small screens*/
+	@media only screen and (max-width: 600px) {
+
+		.projects-content {
+			max-width: 1200px;
+			margin: auto;
+		}
+
+		.projectBox {
+			width: 90%;
+			margin-left: 5%;
+		}
+
+		.projectTitle {
+			font-size: 14pt;
+			margin-top: -15px;
+		}
+
+	}
+
+	/*to fix background for small screens*/
+	@media only screen and (max-width: 600px) {
+
+		body {
+			background: #4596FF;
+		}
+
+		#break {
+			height: 40px;
+		}
+
+	}
+
+	/*to make tech chart clean to read on smaller screens*/
+	@media only screen and (max-width: 820px) {
+
+		.techChartWord {
+			font-size: 12pt;
+			font-weight: bold;
+		}
+
+	}
+
+	@media only screen and (max-width: 600px) {
+
+		#techSectionMain {
+			padding: 30px 0px 30px 30px;
+		}
+
+		.techChartWord {
+			font-size: 8pt;
+		}
+
+		.techChart {
+			height: 10px;
+		}
+
+	}
+
+	@media only screen and (max-width: 420px) {
+
+		.techChartWord {
+			display: block;
+			text-align: left;
+		}
+
+		.techChart {
+			display: block;
+		}
+
+	}
+
+	/*contact info for small screens*/
+	@media only screen and (max-width: 600px) {
+
+		.contact-content {
+			height: 360px;
+
+		}
+
+		.contact-info-left {
+			display: none;
+		}
+
+		.contact-info-right {
+			width: 100%;
+		}
+
+		.contact-info-right div {
+			padding-bottom: 20px;
+			font-size: 16pt;
+			text-align: center;
+		}
+
+	}
+
+	/*contact screen for very small screens*/
+	@media only screen and (max-width: 450px) {
+
+		.contact-content {
+			height: 330px;
+
+		}
+
+		.contact-info-right div {
+			padding-bottom: 20px;
+			font-size: 10pt;
+		}
+
+	}
+
+	/*footer for small screens*/
+	@media only screen and (max-width: 600px) {
+
+		.foot {
+			font-size: 10pt;
+		}
+
+		.footerText, .footerResume, .footerPics {
+			display: block;
+			margin: auto;
+		}
+
+		.footerText > div {
+			padding: 5px;
+		}
+
+		.footerResume a {
+			font-size: 8pt;
+		}
+
+		.footerPics img {
+			display: block;
+			height: 60px;
+			width: 60px;
+			margin: auto;
+			margin-top: 15px;
+		}
+
+	}
+
+/*when screen gets smaller, picture starts shrinking and creeping up the page, leaving a white space
+under itself - this fixes the picture in place once it gets small enough to start making a white space*/
+@media only screen and (max-width: 780px) {
+	body {
+		background: #F7F7F7;
+		background-size: cover;
+		background-size: 100%;
+		font-family: "Times New Roman";
+	}
+
+	.nighttimePicture {
+		background: url("../images/nightPicture.JPG") no-repeat fixed;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+	.afternoonPicture {
+		background: url("../images/afternoonPicture.JPG") no-repeat fixed;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+	.daytimePicture {
+		background: url("../images/daytimePicture.JPG") no-repeat fixed;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+	.morningPicture {
+		background: url("../images/morningPicture.JPG") no-repeat fixed;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
 }

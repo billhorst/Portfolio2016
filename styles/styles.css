@@ -96,6 +96,11 @@ NAVIGATION BAR
 	margin-top: 1px;
 }
 
+.jNav {
+	font-size: 12pt;
+}
+
+
 /*-----------------------------
 NAME AND INTRO SECTION
 -----------------------------*/
@@ -111,6 +116,16 @@ NAME AND INTRO SECTION
 
 #headerName {
 	font-size: 80pt;
+	font-family: lobster;
+	letter-spacing: 20px;
+	margin: auto;
+	color: white;
+	text-shadow: 2px 4px 10px black;
+	background:rgba(255,255,255,0.3);
+}
+
+#jHeader {
+	font-size: 63pt;
 	font-family: lobster;
 	letter-spacing: 20px;
 	margin: auto;
@@ -321,23 +336,52 @@ PROJECTS SECTION
 CONTACT INFO SECTION
 --------------------------*/
 
+
 #contactInfoSection {
-	/*padding-top: 52px;*/
 	padding-bottom: 52px;
-	/*background-color: #F7F7F7;*/
 	background:rgba(255,255,255,0.9);
+	min-height: 350px;
 }
 
 #contactInfoSection > h1 {
 	text-align: center;
 }
 
-.contact-content {
+.contact-info-left, .contact-info-right {
+	display: inline-block;
+}
+
+.contact-info-left {
+	width: 20%;
+	text-align: right;
+}
+
+.contact-info-right {
+	width: 78%;
+}
+
+.contact-info-right div {
+	padding-bottom: 50px;
+	width: 100%;
+	font-size: 20pt;
+}
+
+.contact-info-right-information a {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.contact-info img {
+	height: 75px;
+	width: 75px;
+}
+
+/*.contact-content {
 	height: 180px;
 	width: 700px;
 	margin: auto;
 	margin-top: 50px;
-	/*background-color: white;*/
 	padding: 30px;
 }
 
@@ -363,10 +407,7 @@ CONTACT INFO SECTION
 	float: left;
 }
 
-.contact-info img {
-	height: 75px;
-	width: 75px;
-}
+
 
 .contact-info-right {
 	height: 100%;
@@ -374,64 +415,66 @@ CONTACT INFO SECTION
 	float: right;
 }
 
-.contact-info-right div {
-	height: 75px;
-	width: 100%;
-	font-size: 24pt;
-	padding-top: 10px;
-}
-
-.contact-info-right-information a {
-	color: blue;
-	text-decoration: underline;
-	cursor: pointer;
-}
+*/
 
 
 /*----------------------------
 FOOTER
 ----------------------------*/
+#footer {
+	background-color: black;
+}
 
 .foot {
-	width: 100%;
-	height: 100px;
-	color: white;
-	padding-top: 40px;
-	margin-top: 60px;
+	/*background-color: red;*/
 	clear: both;
-	background-color: black;
-	background:rgba(1,1,1,0.5);
-	border-radius: 100px;
-	box-shadow: 10px 10px 30px white;
-	margin: auto;
+	font-size: 12pt;
+	color: white;
+	padding-top: 10px;
 }
+
+.footerText, .footerResume, .footerPics {
+	display: inline-block;
+}
+
+.footerText {
+	width: 32%;
+	text-align: center;
+}
+
+.footerText > div {
+	padding: 5px;
+}
+
+.footerResume {
+	width: 32%;
+	line-height: 5px;
+	text-align: center;
+}
+
+.footerResume > span {
+	/*background-color: blue;*/
+}
+
+.footerResume a {
+
+}
+
+.footerPics {
+	width: 32%;
+	/*background-color: blue;*/
+}
+
+/*------------------------------*/
 
 .footerLinks a, .footerLink a {
 	text-decoration: none;
 	color: white;
 }
 
-.footerContent {
-	width: 80%;
-	margin: auto;
-}
-
-.footerName, .footerLinks, .footerImages {
-	display: inline-block;
-}
-
-.footerName {
-	margin: 0px 20px 0px 20px;
-}
-
-.footerLinks span {
-	margin-left: 20px;
-	padding-left: -30px;
-}
-
-.footerImages img {
-	height: 30px;
-	width: 30px;
+.footerPics img {
+	height: 60px;
+	width: 60px;
 	margin-left: 30px;
 }
 
@@ -440,17 +483,7 @@ FOOTER
 	border-radius: 100px;
 }
 
-.footerImages {
-	/*background-color: green;*/
-	margin-left: 20px;
-}
-
-.footerResumeLinks {
-
-}
-
 .footerLink {
-	text-decoration: underline;
 	color: white;
 	cursor: pointer;
 }
@@ -516,4 +549,8 @@ MISC
 /*format size for section headers*/
 .sectionTitle {
 	font-size: 36pt;
+}
+
+.jSectionTitle {
+	font-size: 33pt;
 }
