@@ -28,21 +28,18 @@ function returnTimeGreeting() {
 function timePicture() {
 	var today = new Date();
 	var hourNow = today.getHours();
-	// var tPic = "luca";
-	// if (hourNow%2==0) {
-	// 	tPic = "luca";
-	// } else {
-	// 	tPic = "jBiru";
-	// }
+	// var hourNow = 8;
 	var tPic = "";
-	if (hourNow > 19 || hourNow < 6) {
+	if (hourNow > 19 || hourNow < 5) {
 		tPic = "nightPic";
 	} else if (hourNow > 14) {
 		tPic = "afternoonPic";
-	} else  if (hourNow > 8){
+	} else  if (hourNow > 9){
 		tPic = "daytimePic";
-	} else {
+	} else if (hourNow >= 5 && hourNow <=9) {
 		tPic = "morningPic";
+	} else {
+		tPic = "daytimePic";
 	}
 	return tPic;
 }

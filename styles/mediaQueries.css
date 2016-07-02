@@ -261,10 +261,10 @@
 	}
 
 	/*footer for small screens*/
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 450px) {
 
 		.foot {
-			font-size: 10pt;
+			font-size: 7pt;
 		}
 
 		.footerText, .footerResume, .footerPics {
@@ -277,7 +277,7 @@
 		}
 
 		.footerResume a {
-			font-size: 8pt;
+			font-size: 7pt;
 		}
 
 		.footerPics img {
@@ -304,6 +304,7 @@ under itself - this fixes the picture in place once it gets small enough to star
 		background: url("../images/nightPicture.JPG") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-size: 800px 800px;
 		background-position: center;
 	}
 
@@ -311,6 +312,7 @@ under itself - this fixes the picture in place once it gets small enough to star
 		background: url("../images/afternoonPicture.JPG") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-size: 800px 800px;
 		background-position: center;
 	}
 
@@ -318,13 +320,15 @@ under itself - this fixes the picture in place once it gets small enough to star
 		background: url("../images/daytimePicture.JPG") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-size: 800px 800px;
 		background-position: center;
 	}
 
 	.morningPicture {
-		background: url("../images/morningPicture.JPG") no-repeat fixed;
+	background: url("https://s3-us-west-2.amazonaws.com/billhorst.com/images/morningPicture.jpg") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		background-size: 800px 800px;
 		background-position: center;
 	}
 }

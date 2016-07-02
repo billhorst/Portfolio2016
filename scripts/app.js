@@ -11,12 +11,9 @@ function pageController($scope) {
         'daytimePic': false,
         'afternoonPic': false,
         'nightPic': false
-        
-        
     }
     var currentPicture = timePicture();
     $scope.background[currentPicture] = true;
-
 
 
 	//handle language (last used language, current language display)
@@ -49,7 +46,6 @@ function pageController($scope) {
     	$scope.languageChoice.isJapanese = true;
     	localStorage.setItem("languagePreference", "Japanese");
     }
-
 
 
     //Project links

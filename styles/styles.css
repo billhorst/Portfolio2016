@@ -24,7 +24,7 @@ body {
 }
 
 .morningPicture {
-	background: url("../images/morningPicture.JPG") no-repeat fixed;
+	background: url("https://s3-us-west-2.amazonaws.com/billhorst.com/images/morningPicture.jpg") no-repeat fixed;
 	background-size: cover;
 	background-size: 100%;
 }
@@ -196,17 +196,17 @@ TECHNOLOGY LIST
 
 .c3 {
 	background-color: lightblue;
-	width: 55%;
+	width: 50%;
 }
 
 .jv {
 	background-color: green;
-	width: 41%;
+	width: 55%;
 }
 
 .jvscpt {
 	background-color: yellow;
-	width: 51%;
+	width: 55%;
 }
 
 .ang {
@@ -332,9 +332,9 @@ PROJECTS SECTION
 }
 
 .pResume {
-	font-size: 16pt;
-	margin-bottom: 10px;
-	border-radius: 5px;
+	font-size: 18pt;
+	margin-bottom: 15px;
+	border-radius: 10px;
 	background-color: black;
 	color: white;
 	cursor: pointer;

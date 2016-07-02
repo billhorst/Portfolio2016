@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="pageController">
 <head>
+	<meta charset="utf-8"/>
 	<title>Bill Horst Web Developer</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
 	<!-- // <script src="scripts/angular.js"></script> -->
 	// <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="scripts/scripts.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/directives.js"></script>
 	<script src="scripts/factories.js"></script>
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="styles/styles.css">
 	<link rel="stylesheet" href="styles/mediaQueries.css">
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-	<!-- 	<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />  -->
+	<link rel='icon' href='favicon.ico'>
 </head>
 <body ng-class="{ 
 'nighttimePicture' : background.nightPic, 
@@ -24,103 +24,102 @@
 
 <div id="container">
 
-<!-- 		<div id="header">
-			
-</div> -->
+	<!-- navigation bar -->
+	<div class="topNavigation">
+		<div ng-show="languageChoice.isEnglish">
+			<ul class="navList">
+				<li class="nameLogo"><a href="#billHorst">Bill Horst</a></li>
+				<li><a href="#technologies">Technologies</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li class="resumeDropdown">Resume
+					<div class="dropdown-content">
+						<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()">View</a>
+						<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume">Download</a>
+					</div>
+				</li>
+			</ul>
 
-<div class="topNavigation">
-	<div ng-show="languageChoice.isEnglish">
-		<ul class="navList">
-			<li class="nameLogo"><a href="#billHorst">Bill Horst</a></li>
-			<li><a href="#technologies">Technologies</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li class="resumeDropdown">Resume
-				<div class="dropdown-content">
-					<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()">View</a>
-					<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume">Download</a>
-				</div>
-			</li>
-		</ul>
-
-		<div class="langButtonDiv">
-			<button class="langButton" ng-click="toJapanese()">日本語</button>
+			<div class="langButtonDiv">
+				<button class="langButton" ng-click="toJapanese()">日本語</button>
+			</div>
+		</div>
+		<div ng-show="languageChoice.isJapanese">
+			<ul class="navList">
+				<li class="nameLogo"><a href="#billHorst" class="jNavLogo">ホースト-ビリー</a></li>
+				<li><a href="#technologies" class="jNav">テクノロジー</a></li>
+				<li><a href="#projects" class="jNav">プロジェクト</a></li>
+				<li><a href="#contact" class="jNav">連絡先</a></li>
+				<li class="resumeDropdown"><span class="jNav">履歴書</span>
+					<div class="dropdown-content">
+						<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()">閲覧</a>
+						<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume">ダウンロード</a>
+					</div>
+				</li>
+			</ul>
+			<div class="langButtonDiv">
+				<button class="langButton jButton" ng-click="toEnglish()" ng-show="languageChoice.isJapanese">English</button>
+			</div>
 		</div>
 	</div>
-	<div ng-show="languageChoice.isJapanese">
-		<ul class="navList">
-			<li class="nameLogo"><a href="#billHorst" class="jNavLogo">ホースト*ビリー</a></li>
-			<li><a href="#technologies" class="jNav">テクノロジー</a></li>
-			<li><a href="#projects" class="jNav">プロジェクト</a></li>
-			<li><a href="#contact" class="jNav">連絡先</a></li>
-			<li class="resumeDropdown"><span class="jNav">履歴書</span>
-				<div class="dropdown-content">
-					<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()">閲覧</a>
-					<a href="pdfs/HorstResume.pdf" download="WilliamHorstResume">ダウンロード</a>
-				</div>
-			</li>
-		</ul>
-		<div class="langButtonDiv">
-			<button class="langButton jButton" ng-click="toEnglish()" ng-show="languageChoice.isJapanese">English</button>
-		</div>
+
+	<!--body contains all templates-->
+	<div id="body">
+
+		<name-intro id="billHorst"></name-intro>
+		<div id="break"></div>
+		<tech-list id="technologies"></tech-list>
+		<div id="break"></div>
+		<project-list id="projects"></project-list>
+		<div id="break"></div>
+		<contact-info id="contact"></contact-info>
+
 	</div>
-</div>
-
-<!--body contains all templates-->
-<div id="body">
-
-	<name-intro id="billHorst"></name-intro>
 	<div id="break"></div>
-	<tech-list id="technologies"></tech-list>
-	<div id="break"></div>
-	<project-list id="projects"></project-list>
-	<div id="break"></div>
-	<contact-info id="contact"></contact-info>
 
-</div>
-<div id="break"></div>
-<div id="footer">
-	<div class="foot" ng-show="languageChoice.isEnglish">
-		<div class="footerText">
-			<div class="footerLink footerHover"><a href="#billHorst">Bill Horst</a></div>
-			<div class="footerLink footerHover"><a href="#projects">Projects</a></div>
-			<div class="footerLink footerHover"><a href="#technologies">Technologies</a></div>
-			<div class="footerLink footerHover"><a href="#contact">Contact Info</a></div>
+	<!-- footer -->
+	<div id="footer">
+		<div class="foot" ng-show="languageChoice.isEnglish">
+			<div class="footerText">
+				<div class="footerLink footerHover"><a href="#billHorst">Bill Horst</a></div>
+				<div class="footerLink footerHover"><a href="#projects">Projects</a></div>
+				<div class="footerLink footerHover"><a href="#technologies">Technologies</a></div>
+				<div class="footerLink footerHover"><a href="#contact">Contact Info</a></div>
+			</div>
+			<div class="footerResume">
+				<p>Resume:</p>
+				<p><a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()" class="footerResumeLinks footerLink footerHover">View</a> / <a href="pdfs/HorstResume.pdf" download="WilliamHorstResume" class="footerResumeLinks footerLink footerHover">Download</a></p>
+			</div>
+			<div class="footerPics">
+				<a href='https://github.com/billhorst'><img src='images/gitHubIcon.png' alt="GitHub Icon" id="gitHubIcon"></a>
+				<a href='https://www.linkedin.com/in/bill-horst-a30a3629'><img src='images/linkedInIcon.png' alt="LinkedIn Icon"></a>
+			</div>
 		</div>
-		<div class="footerResume">
-			<p>Resume:</p>
-			<p><a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()" class="footerResumeLinks footerLink footerHover">View</a> / <a href="pdfs/HorstResume.pdf" download="WilliamHorstResume" class="footerResumeLinks footerLink footerHover">Download</a></p>
-		</div>
-		<div class="footerPics">
-			<a href='https://github.com/billhorst'><img src='images/gitHubIcon.png' alt="GitHub Icon" id="gitHubIcon"></a>
-			<a href='https://www.linkedin.com/in/bill-horst-a30a3629'><img src='images/linkedInIcon.png' alt="LinkedIn Icon"></a>
-		</div>
+		<p style="color: white; padding: 0px 0px 5px 10px">&copy Bill Horst 2016</p>
 	</div>
-	<p style="color: white; padding: 0px 0px 5px 10px">&copy Bill Horst 2016</p>
-</div>
 
-<div id="footer">
-	<div class="foot" ng-show="languageChoice.isJapanese">
-		<div class="footerText">
-			<div class="footerLink footerHover"><a href="#billHorst">ホースト*ビリー</a></div>
-			<div class="footerLink footerHover"><a href="#projects">プロジェクト</a></div>
-			<div class="footerLink footerHover"><a href="#technologies">テクノロジー</a></div>
-			<div class="footerLink footerHover"><a href="#contact">連絡先</a></div>
+	<div id="footer">
+		<div class="foot" ng-show="languageChoice.isJapanese">
+			<div class="footerText">
+				<div class="footerLink footerHover"><a href="#billHorst">ホースト-ビリー</a></div>
+				<div class="footerLink footerHover"><a href="#projects">プロジェクト</a></div>
+				<div class="footerLink footerHover"><a href="#technologies">テクノロジー</a></div>
+				<div class="footerLink footerHover"><a href="#contact">連絡先</a></div>
+			</div>
+			<div class="footerResume">
+				<p>履歴書:</p>
+				<p><a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()" class="footerResumeLinks footerLink footerHover">閲覧</a> / <a href="pdfs/HorstResume.pdf" download="WilliamHorstResume" class="footerResumeLinks footerLink footerHover">ダウンロード</a></p>
+			</div>
+			<div class="footerPics">
+				<a href='https://github.com/billhorst'><img src='images/gitHubIcon.png' alt="GitHub Icon" id="gitHubIcon"></a>
+				<a href='https://www.linkedin.com/in/bill-horst-a30a3629'><img src='images/linkedInIcon.png' alt="LinkedIn Icon"></a>
+			</div>
 		</div>
-		<div class="footerResume">
-			<p>履歴書:</p>
-			<p><a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()" class="footerResumeLinks footerLink footerHover">閲覧</a> / <a href="pdfs/HorstResume.pdf" download="WilliamHorstResume" class="footerResumeLinks footerLink footerHover">ダウンロード</a></p>
-		</div>
-		<div class="footerPics">
-			<a href='https://github.com/billhorst'><img src='images/gitHubIcon.png' alt="GitHub Icon" id="gitHubIcon"></a>
-			<a href='https://www.linkedin.com/in/bill-horst-a30a3629'><img src='images/linkedInIcon.png' alt="LinkedIn Icon"></a>
-		</div>
+		<p style="color: white; padding: 0px 0px 5px 10px">&copy Bill Horst 2016</p>
 	</div>
-	<p style="color: white; padding: 0px 0px 5px 10px">&copy Bill Horst 2016</p>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="scripts/smoothScroll.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="scripts/smoothScroll.js"></script>	
 </body>
 </html>
 
@@ -129,6 +128,5 @@
 *on front page, leave 3 or 4 projects, but also put a button to expand into more
 projects and also to be able to filter out by technology used*
 
-*add Japanese to footer
 
 -->
