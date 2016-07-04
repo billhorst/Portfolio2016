@@ -3,9 +3,12 @@ angular.module('app', ['Directives', 'Factories'])
 .controller('pageController', pageController);
 
 function pageController($scope) {
+
+    //gets greeting depending on time of day
 	$scope.message = {};
 	$scope.message.timeGreeting = returnTimeGreeting();
 
+    //gets time of day and sets appropriate background image
     $scope.background = {
         'morningPic': false,
         'daytimePic': false,
@@ -14,8 +17,7 @@ function pageController($scope) {
     var currentPicture = timePicture();
     $scope.background[currentPicture] = true;
 
-	//handle language (last used language, current language display)
-
+	//handles language (last used language, current language display)
 	if (typeof(Storage) !== "undefined") {
         //do nothing
     } else {
@@ -23,7 +25,6 @@ function pageController($scope) {
     }
 
     $scope.languageChoice = {};
-    $scope.url = {};
 
     if(localStorage.getItem("languagePreference") === "English") {
     	$scope.languageChoice.isEnglish = true; 
@@ -62,6 +63,7 @@ function pageController($scope) {
 
 
     //Project links
+    $scope.url = {};
 
     $scope.openPlotGeneratorApp = function() {
     	$scope.url.plotGenApp = 'http://billhorst.github.io/PlotGenerator/index.html';
