@@ -5,14 +5,8 @@ body {
 	font-family: "Times New Roman";
 }
 
-.nighttimePicture {
-	background: url("../images/nightPicture.JPG") no-repeat fixed;
-	background-size: cover;
-	background-size: 100%;
-}
-
-.afternoonPicture {
-	background: url("../images/afternoonPicture.JPG") no-repeat fixed;
+.eveningPicture {
+	background: url("../images/eveningPicture.JPG") no-repeat fixed;
 	background-size: cover;
 	background-size: 100%;
 }
@@ -24,7 +18,7 @@ body {
 }
 
 .morningPicture {
-	background: url("https://s3-us-west-2.amazonaws.com/billhorst.com/images/morningPicture.jpg") no-repeat fixed;
+	background: url("../images/morningTimePicture.jpg") no-repeat fixed;
 	background-size: cover;
 	background-size: 100%;
 }
@@ -106,7 +100,7 @@ NAME AND INTRO SECTION
 -----------------------------*/
 
 #nameAndIntroSection {
-	padding-top: 52px;
+	padding-top: 150px;
 	padding-bottom: 52px;
 	text-align: center;
 	/*background-color: #F7F7F7;*/
@@ -119,9 +113,9 @@ NAME AND INTRO SECTION
 	font-family: lobster;
 	letter-spacing: 20px;
 	margin: auto;
-	color: white;
+	color: #E6E6E6;
 	text-shadow: 2px 4px 10px black;
-	background:rgba(255,255,255,0.3);
+	background:rgba(255,255,255,0.5);
 }
 
 #jHeader {
@@ -134,12 +128,12 @@ NAME AND INTRO SECTION
 	background:rgba(255,255,255,0.3);
 }
 
-#introDiv {
+.introDiv {
 	width: 80%;
 	margin: auto;
-	color: white;
-	text-shadow: 2px 3px 10px black;
-	background:rgba(255,255,255,0.3);
+	color: grey;
+	text-shadow: 2px 3px 10px white;
+	background:rgba(255,255,255,0.8);
 	border-radius: 10px;
 }
 
@@ -205,7 +199,7 @@ TECHNOLOGY LIST
 }
 
 .jvscpt {
-	background-color: yellow;
+	background-color: #DCE800;
 	width: 55%;
 }
 
@@ -230,16 +224,25 @@ PROJECTS SECTION
 	/*background-color: #F7F7F7;*/
 	background:rgba(255,255,255,0.9);
 	text-align: center;
+	min-height: 500px;
+	overflow: visible;
+}
+
+.hideProjects {
+	height: 800px;
+	overflow: hidden;
 }
 
 .projects-content {
 	max-width: 1200px;
 	margin: auto;
+	box-shadow: 0 0 50px grey;
+	border-radius: 15px;
 }
 
 .projectBox {
-	width: 40%;
-	margin: 40px 10px 0px 50px;
+	width: 47%;
+	margin: 40px 10px 0px 10px;
 	display: inline-block;
 	float: left;
 	/*background-color: white;*/
@@ -328,16 +331,31 @@ PROJECTS SECTION
 
 #clearBottomOfProjects {
 	clear: both;
-	padding-top: 100px;
+	padding-top: 50px;
+}
+
+.expandCollapseProjects {
+	font-size: 18pt;
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
 }
 
 .pResume {
 	font-size: 18pt;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	border-radius: 10px;
 	background-color: black;
 	color: white;
 	cursor: pointer;
+	padding: 10px;
+}
+
+.pResume:hover, .expandCollapseProjects:hover {
+	background-color: #555;
 }
 
 

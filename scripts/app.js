@@ -9,12 +9,10 @@ function pageController($scope) {
     $scope.background = {
         'morningPic': false,
         'daytimePic': false,
-        'afternoonPic': false,
-        'nightPic': false
+        'eveningPic': false
     }
     var currentPicture = timePicture();
     $scope.background[currentPicture] = true;
-
 
 	//handle language (last used language, current language display)
 
@@ -45,6 +43,21 @@ function pageController($scope) {
     	$scope.languageChoice = {};
     	$scope.languageChoice.isJapanese = true;
     	localStorage.setItem("languagePreference", "Japanese");
+    }
+
+    //expand projects
+
+    $scope.showProjects = {
+        "projectsExpanded": false,
+    }
+    $scope.expandProjects = function() {
+        $("#projectList").removeClass("hideProjects");
+        $scope.showProjects.projectsExpanded = true;
+    }
+
+    $scope.collapseProjects = function() {
+        $("#projectList").addClass("hideProjects");
+        $scope.showProjects.projectsExpanded = false;
     }
 
 

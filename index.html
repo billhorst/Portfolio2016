@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Bill Horst Web Developer</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
-	<!-- // <script src="scripts/angular.js"></script> -->
-	// <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script> -->
+	// <script src="scripts/angular.js"></script>
+	<!-- // <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
 	<script src="scripts/app.js"></script>
 	<script src="scripts/directives.js"></script>
 	<script src="scripts/factories.js"></script>
@@ -16,8 +16,7 @@
 	<link rel='icon' href='favicon.ico'>
 </head>
 <body ng-class="{ 
-'nighttimePicture' : background.nightPic, 
-'afternoonPicture' : background.afternoonPic, 
+'eveningPicture' : background.eveningPic, 
 'daytimePicture' : background.daytimePic,
 'morningPicture' : background.morningPic 
 }">
@@ -46,9 +45,9 @@
 		</div>
 		<div ng-show="languageChoice.isJapanese">
 			<ul class="navList">
-				<li class="nameLogo"><a href="#billHorst" class="jNavLogo">ホースト-ビリー</a></li>
-				<li><a href="#technologies" class="jNav">テクノロジー</a></li>
-				<li><a href="#projects" class="jNav">プロジェクト</a></li>
+				<li class="nameLogo"><a href="#billHorst" class="jNavLogo">ホースト　ビリー</a></li>
+				<li><a href="#technologies" class="jNav">技術・言語</a></li>
+				<li><a href="#projects" class="jNav">制作物</a></li>
 				<li><a href="#contact" class="jNav">連絡先</a></li>
 				<li class="resumeDropdown"><span class="jNav">履歴書</span>
 					<div class="dropdown-content">
@@ -101,9 +100,9 @@
 	<div id="footer">
 		<div class="foot" ng-show="languageChoice.isJapanese">
 			<div class="footerText">
-				<div class="footerLink footerHover"><a href="#billHorst">ホースト-ビリー</a></div>
-				<div class="footerLink footerHover"><a href="#projects">プロジェクト</a></div>
-				<div class="footerLink footerHover"><a href="#technologies">テクノロジー</a></div>
+				<div class="footerLink footerHover"><a href="#billHorst">ホースト　ビリー</a></div>
+				<div class="footerLink footerHover"><a href="#projects">制作物</a></div>
+				<div class="footerLink footerHover"><a href="#technologies">技術・言語</a></div>
 				<div class="footerLink footerHover"><a href="#contact">連絡先</a></div>
 			</div>
 			<div class="footerResume">
@@ -120,6 +119,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script src="scripts/smoothScroll.js"></script>	
+	<script src="scripts/projectOverflow.js"></script>
 </body>
 </html>
 

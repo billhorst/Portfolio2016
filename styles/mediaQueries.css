@@ -300,16 +300,8 @@ under itself - this fixes the picture in place once it gets small enough to star
 		font-family: "Times New Roman";
 	}
 
-	.nighttimePicture {
-		background: url("../images/nightPicture.JPG") no-repeat fixed;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 800px 800px;
-		background-position: center;
-	}
-
-	.afternoonPicture {
-		background: url("../images/afternoonPicture.JPG") no-repeat fixed;
+	.eveningPicture {
+		background: url("../images/eveningPicture.JPG") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 800px 800px;
@@ -325,7 +317,7 @@ under itself - this fixes the picture in place once it gets small enough to star
 	}
 
 	.morningPicture {
-	background: url("https://s3-us-west-2.amazonaws.com/billhorst.com/images/morningPicture.jpg") no-repeat fixed;
+		background: url("../images/morningTimePicture.jpg") no-repeat fixed;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 800px 800px;

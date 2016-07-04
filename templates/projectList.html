@@ -1,10 +1,22 @@
 <div id="projectsSection">
 	<hr />
 	<h1 class="sectionTitle" ng-show="languageChoice.isEnglish">Recent Projects</h1>
-	<h1 class="jSectionTitle" ng-show="languageChoice.isJapanese">最近のプロジェクト</h1>
+	<h1 class="jSectionTitle" ng-show="languageChoice.isJapanese">最近の制作物</h1>
 	<hr />
-	<div class="projects-content">
 
+	<div>
+		<button ng-click="expandProjects()" ng-show="languageChoice.isEnglish && !showProjects.projectsExpanded" class="expandCollapseProjects">Expand Project List</button>
+		<br />
+		<button ng-click="expandProjects()" ng-show="languageChoice.isJapanese && !showProjects.projectsExpanded" class="expandCollapseProjects">制作物を全て見る</button>
+	</div>
+
+	<div>
+		<button ng-click="collapseProjects()" ng-show="languageChoice.isEnglish && showProjects.projectsExpanded" class="expandCollapseProjects">Collapse Project List</button>
+		<br />
+		<button ng-click="collapseProjects()" ng-show="languageChoice.isJapanese && showProjects.projectsExpanded" class="expandCollapseProjects">制作物を隠す</button>
+	</div>
+
+	<div class="projects-content hideProjects" id="projectList">
 
 		<div class="projectBox">
 			<div class="projectTitle">
@@ -14,7 +26,7 @@
 			<a target="_blank" ng-href="{{url.plotGenApp}}" ng-click="openPlotGeneratorApp()"><div class="projectApp"><img src="images/plotGenPic.PNG" alt="Plot Generator Picture" /></div></a>
 			<div class="projectDescription">
 				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS application that takes words you input and generates a random plot in various genres.</p>
-				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">単語を入れてランダムな話が読めるAngularJSで作られたアプリ</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">単語を入力するとランダムに話が作れます。AngularJSを使用。</p>
 			</div>
 			<a target="_blank" ng-href="{{url.plotGenCode}}" ng-click="openPlotGeneratorCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
 		</div>
@@ -28,7 +40,7 @@
 			<a target="_blank" ng-href="{{url.flickrSearcherApp}}" ng-click="openFlickrSearcherApp()"><div class="projectApp"><img src="images/flickrPic.PNG" alt="Flickr Searcher Picture"/></div></a>
 			<div class="projectDescription">
 				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS app that uses the Flickr API and returns pictures based on the search criteria you specify.</p>
-				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">フリッカーのAPIに頼んで写真を返すAngularJSで作られたアプリ</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">フリッカーのAPIを使って写真を検索します。AngularJSを使用。</p>
 			</div>
 			<a target="_blank" ng-href="{{url.flickrSearcherCode}}" ng-click="openFlickrSearcherCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
 		</div>
@@ -42,7 +54,7 @@
 			<a target="_blank" ng-href="{{url.calculatorApp}}" ng-click="openCalculatorApp()"><div class="projectApp"><img src="images/calculatorPic.PNG" alt="Calculator Picture" /></div></a>
 			<div class="projectDescription">
 				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">A basic calculator made with AngularJS and JavaScript. Saves and shows your past calculations.</p>
-				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">AngularJSとJavaScriptで作られた基本的な電卓</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">基本的な電卓。AngularJSとJavaScriptで作りました。</p>
 			</div>
 			<a target="_blank" ng-href="{{url.calculatorCode}}" ng-click="openCalculatorCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
 		</div>
@@ -56,7 +68,7 @@
 			<a target="_blank" ng-href="{{url.geographyQuizApp}}" ng-click="openGeographyQuizApp()"><div class="projectApp"><img src="images/geographyQuizPic.PNG" alt="Geography Quiz Picture" /></div></a>
 			<div class="projectDescription">
 				<p ng-show="languageChoice.isEnglish" class="sans-serifFont">An AngularJS application that calls to the Geonames API. You can take a 10 question quiz on one of three types.</p>
-				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">GeonamesのAPIに頼んで３種類のクイズをできるAngularJSのアプリ</p>
+				<p ng-show="languageChoice.isJapanese" class="sans-serifFont">GeonamesのAPIを使用して３種類のクイズで遊べます。AngularJSを使用。</p>
 			</div>
 			<a target="_blank" ng-href="{{url.geographyQuizCode}}" ng-click="openGeographyQuizCode()"><div class="projectCode sans-serifFont"><span ng-show="languageChoice.isEnglish">See code in GitHub</span><span ng-show="languageChoice.isJapanese">GitHubでコードを閲覧</span></div></a>
 		</div>
@@ -64,7 +76,21 @@
 	</div>
 
 	<div id="clearBottomOfProjects"></div>
-	
+
+	<div>
+		<button ng-click="expandProjects()" ng-show="languageChoice.isEnglish && !showProjects.projectsExpanded" class="expandCollapseProjects">Expand Project List</button>
+		<br />
+		<button ng-click="expandProjects()" ng-show="languageChoice.isJapanese && !showProjects.projectsExpanded" class="expandCollapseProjects">制作物を全て見る</button>
+	</div>
+
+	<div>
+		<button ng-click="collapseProjects()" ng-show="languageChoice.isEnglish && showProjects.projectsExpanded" class="expandCollapseProjects">Collapse Project List</button>
+		<br />
+		<button ng-click="collapseProjects()" ng-show="languageChoice.isJapanese && showProjects.projectsExpanded" class="expandCollapseProjects">制作物を隠す</button>
+	</div>
+
+	<hr />
+
 	<div ng-show="languageChoice.isEnglish">
 		<a target="_blank" href="{{url.resumeApp}}" ng-click="openResumeApp()"><button class="pResume">View Resume</button></a>
 		<br />
