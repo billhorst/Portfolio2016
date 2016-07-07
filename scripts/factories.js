@@ -1,41 +1,35 @@
 angular.module('Factories', [])
 
-.factory('timeGreeting', returnTimeGreeting)
-.factory('timePicture', timePicture)
+// .factory('timeGreeting', returnTimeGreeting)
+// .factory('timePicture', timePicture)
 
-function returnTimeGreeting() {
+.factory('TimeFactory', function() {
+
 	var today = new Date();
 	var hourNow = today.getHours();
-	var eGreeting;
-	var jGreeting;
-	var greetings = [];
 
-	if (hourNow > 16) {
-		eGreeting = "Evening!";
-		jGreeting = "こんばんは！";
-	} else if (hourNow > 12) {
-		eGreeting = "Afternoon!";
-		jGreeting = "こんにちは！";
-	} else {
-		eGreeting = "Morning!"
-		jGreeting = "おはようございます！";
-	}
-	greetings.push(eGreeting);
-	greetings.push(jGreeting);
-	return greetings;
-}
+	return {
+		returnTimeGreeting: function() {
+			if (hourNow > 16) {
+				return ["Evening!", "こんばんは！"];
+			} else if (hourNow > 12) {
+				return ["Afternoon!", "こんにちは！"];
+			} else {
+				return ["Morning!", "おはようございます！"]
+			}
+		},
 
-function timePicture() {
-	var today = new Date();
-	var hourNow = today.getHours();
-	// var hourNow = 5;
-	var tPic = "";
-	if (hourNow > 16) {
-		tPic = "eveningPic";
-	} else if (hourNow > 12) {
-		tPic = "daytimePic";
-	} else {
-		tPic = "morningPic";
-	}
-	return tPic;
-}
+		timePicture: function() {
+			var tPic = "";
+			if (hourNow > 16) {
+				tPic = "eveningPic";
+			} else if (hourNow > 12) {
+				tPic = "daytimePic";
+			} else {
+				tPic = "morningPic";
+			}
+			return tPic;
+		}
+	};
+
+})

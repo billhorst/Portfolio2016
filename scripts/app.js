@@ -2,11 +2,11 @@ angular.module('app', ['Directives', 'Factories'])
 
 .controller('pageController', pageController);
 
-function pageController($scope) {
+function pageController($scope, TimeFactory) {
 
     //gets greeting depending on time of day
 	$scope.message = {};
-	$scope.message.timeGreeting = returnTimeGreeting();
+	$scope.message.timeGreeting = TimeFactory.returnTimeGreeting();
 
     //gets time of day and sets appropriate background image
     $scope.background = {
@@ -14,7 +14,7 @@ function pageController($scope) {
         'daytimePic': false,
         'eveningPic': false
     }
-    var currentPicture = timePicture();
+    var currentPicture = TimeFactory.timePicture();
     $scope.background[currentPicture] = true;
 
 	//handles language (last used language, current language display)
@@ -46,6 +46,10 @@ function pageController($scope) {
     	localStorage.setItem("languagePreference", "Japanese");
     }
 
+    //projects from projectInfo.js
+
+    $scope.projectArray = arrayOfProjects;
+
     //expand projects
 
     $scope.showProjects = {
@@ -62,40 +66,8 @@ function pageController($scope) {
     }
 
 
-    //Project links
+    //to view resume on GitHub
     $scope.url = {};
-
-    $scope.openPlotGeneratorApp = function() {
-    	$scope.url.plotGenApp = 'http://billhorst.github.io/PlotGenerator/index.html';
-    }
-
-    $scope.openPlotGeneratorCode = function() {
-    	$scope.url.plotGenCode = 'https://github.com/billhorst/PlotGenerator';
-    }
-
-    $scope.openFlickrSearcherApp = function() {
-    	$scope.url.flickrSearcherApp = 'http://billhorst.github.io/FlickrSearcher/index.html';
-    }
-
-    $scope.openFlickrSearcherCode = function() {
-    	$scope.url.flickrSearcherCode = 'https://github.com/billhorst/FlickrSearcher';
-    }
-
-    $scope.openGeographyQuizApp = function() {
-        //$scope.url.geographyQuizApp = 'Quiz game after I replace the billhorst one with the new one';
-    }
-
-    $scope.openGeographyQuizCode = function() {
-        //$scope.url.geographyQuizCode = 'Same as the app: put up after I replace old one on billhorst GitHub';
-    }
-
-    $scope.openCalculatorApp = function() {
-    	$scope.url.calculatorApp = 'http://billhorst.github.io/Calculator/index.html';
-    }
-
-    $scope.openCalculatorCode = function() {
-    	$scope.url.calculatorCode = 'https://github.com/billhorst/Calculator';
-    }
 
     $scope.openResumeApp = function() {
     	$scope.url.resumeApp = "http://billhorst.github.io/resume/index.html";

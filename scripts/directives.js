@@ -4,6 +4,7 @@ angular.module('Directives', [])
 .directive('techList', techList)
 .directive('projectList', projectList)
 .directive('contactInfo', contactInfo)
+.directive('expandCollapseButton', expandCollapseButton)
 
 function nameIntro() {
 	return {
@@ -29,6 +30,23 @@ function projectList() {
 function contactInfo() {
 	return {
 		templateUrl: 'templates/contactInfo.html',
+		type: 'E'
+	}
+}
+
+function expandCollapseButton() {
+	return {
+		template:	
+		'<div>'+
+		'<button ng-click="expandProjects()" ng-show="languageChoice.isEnglish && !showProjects.projectsExpanded" class="expandCollapseProjects">Expand Project List</button>'+
+		'<br />'+
+		'<button ng-click="expandProjects()" ng-show="languageChoice.isJapanese && !showProjects.projectsExpanded" class="expandCollapseProjects">制作物を全て見る</button>'+
+		'</div>'+
+		'<div>'+
+		'<button ng-click="collapseProjects()" ng-show="languageChoice.isEnglish && showProjects.projectsExpanded" class="expandCollapseProjects">Collapse Project List</button>'+
+		'<br />'+
+		'<button ng-click="collapseProjects()" ng-show="languageChoice.isJapanese && showProjects.projectsExpanded" class="expandCollapseProjects">制作物を隠す</button>'+
+		'</div>',
 		type: 'E'
 	}
 }
